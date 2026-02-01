@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Phrase du jour</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #fff7e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 1.4em;
+  text-align: center;
+  max-width: 500px;
+}
+</style>
+</head>
+<body>
+
+<div class="box" id="phrase"></div>
+
+<script>
+const phrases = [
+"À table ! Même ceux qui disaient ne pas avoir faim sont attendus.",
+"Le repas est prêt : les chamailleries reprendront après le dessert.",
+"Ici, on commence à manger avant de demander ce qu’il y a après.",
+"Moment officiel où tout le monde se tait… sauf pour mâcher.",
+"Repas de famille : plus on est de fous, plus les assiettes se vident.",
+"Silence dans la salle, le plat principal entre en scène.",
+"On mange d’abord, on négocie les légumes ensuite.",
+"Ce repas a été cuisiné avec amour… et un peu d’autorité.",
+"Si quelqu’un parle trop, c’est qu’il n’a pas encore assez mangé.",
+"À table ! Le seul endroit où tout le monde finit par se retrouver.",
+"Attention, repas en cours : les plaintes sont acceptées après.",
+"Tout le monde à table avant que ça refroidisse !",
+"Ici, le menu du jour : ce qu’il y a dans l’assiette.",
+"Repas de famille = ventre plein, cœur content.",
+"On mange ensemble, même si on n’est pas d’accord sur le dessert.",
+"Moment sacré : fourchettes levées, bonne humeur activée.",
+"À table ! Les écrans font une pause, les estomacs pas.",
+"Ce plat mérite le silence… ou au moins des compliments.",
+"On commence à manger avant que quelqu’un dise « c’est bizarre ».",
+"Repas familial : là où les portions disparaissent mystérieusement.",
+"Tout le monde mange, même ceux qui goûtent juste un peu.",
+"Ici, on partage tout… sauf la dernière frite.",
+"À table ! Le seul débat autorisé : avec ou sans sauce.",
+"Ce repas est approuvé par la cuisine familiale.",
+"On mange chaud et on discute froid après.",
+"Moment officiel pour oublier les soucis et remplir les assiettes.",
+"À table ! Même les retardataires seront servis.",
+"Repas en famille : le bonheur passe par l’estomac.",
+"On commence à manger avant que quelqu’un demande autre chose.",
+"Ce plat a été préparé avec patience… mangez-le.",
+"À table ! Aujourd’hui, tout le monde a faim."
+];
+
+const day = new Date().getDate();
+document.getElementById("phrase").innerText = phrases[(day - 1) % phrases.length];
+</script>
+
+</body>
+</html>
